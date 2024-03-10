@@ -8,19 +8,19 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Responsive Redesign</title>
-    <!-- import CSS styles -->
     <link rel="stylesheet" href="styles.css" />
   </head>
 
-  <!-- page content goes into <body> -->
   <body>
-    <div id="logoBar" class="navbar">
+
+    <!-- very top of page -->
+    <div id="logoBar" class="header">
       <h1 class="title">Menominee Indian Tribe</h1>
-      <!-- <img id="siteLogo" alt="Pooh-bear site logo" src="./assets/menominee_main.jpeg" /> -->
       <input type="checkbox" id="nav-check" />
       <label for="nav-check" class="nav-toggler">
         <span></span>
       </label>
+      <!-- the actual navbar part of the header -->
       <div class="first-nav">
         <div class="dropdown">
           <button class="dropbtn first">Government</button>
@@ -67,6 +67,7 @@
         </div>
       </div>
     </div>
+    <!-- Thefirst part of the page -->
     <div id="landing">
       <div class="words">
         <h1>
@@ -94,6 +95,7 @@
       </p>
     </div>
 
+    <!-- the second nav bar that is more focused on the community -->
     <div id="second-nav">
       <div class="dropdown">
         <button class="dropbtn second">Back Forty Mine</button>
@@ -126,6 +128,7 @@
       </div>
     </div>
 
+    <!-- This contains most of the main page info such as announcements and when council meetings will happen -->
     <div id="mainInfo">
       <div id="news">
         <h2>News and Announcements</h2>
@@ -193,18 +196,25 @@
       </div>
     </div>
 
+    <!-- These are the things that are on their website but don't have a specific place to 
+    go. So they all live in the same place -->
     <div id="fun-things">
       <h3 class="facebook-line">Check out our facebook!</h3>
       <a href="">
-        <img alt="Image/link to the menominee facebook page" src="/assets/IMG_1065.jpg"/>
+        <img
+          alt="Image/link to the menominee facebook page"
+          src="/assets/IMG_1065.jpg"
+        />
       </a>
       <div class="learn-more-buttons">
         <button class="learn-more">Tribal Members Login</button>
         <button class="learn-more">Vision and Values</button>
-        <button class="learn-more"> Sign up for Emergency Alerts</button>
+        <button class="learn-more">Sign up for Emergency Alerts</button>
       </div>
     </div>
 
+    <!-- This is the bottom header used so that people who scroll all the way to the bottom
+    will still be able to contact the tribe.  -->
     <div id="bottom-nav">
       <h2 class="bottom-header">The Menominee Indian Tribe of Wisconsin</h2>
       <div class="extra-info">

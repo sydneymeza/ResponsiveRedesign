@@ -1,3 +1,5 @@
+/* These are the colors for the fonts and setting the font family for the page */
+
 body {
   background-color: #feffe674;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -19,8 +21,11 @@ p {
   color: #30321c;
 }
 
+/* Since h1 is used multiple times, and the title is the only h1 that has a dar background it needs to be reset */
 .title {
   color: #feffe6;
+  margin: 2%;
+  margin-left: 4%;
 }
 
 a {
@@ -31,6 +36,7 @@ a:hover {
   color: #035e7b;
 }
 
+/* This is the basic styling for the buttons */
 button {
   background-color: #a2a77f;
   color: #eff1c5;
@@ -43,22 +49,25 @@ button:active {
   background-color: #80874f;
 }
 
+/* Setting the image width to keep it from */
 img {
   width: 100%;
 }
 
-/* the back button */
+/* These are for the 'back' and 'next' page buttons 
+in the Upcoming meetings section -> just giving them better spacingg */
 .back {
   height: 5vh;
   margin: 2%;
 }
-
 .next {
   height: 5vh;
   margin: 2%;
 }
 
-.navbar {
+
+/* This is for the top of the page the navbar/header */
+.header {
   display: flex;
   background-color: #002e2c;
   color: #feffe6;
@@ -70,14 +79,15 @@ img {
   top: 0px;
   left: 0px;
   justify-content: space-between;
-  /* position:relative; */
   align-items: center;
 }
 
+/*  This is specifically for the navigation items on the right for the first nav bar, trying to make sure they are aligned */
 .first-nav {
   margin-right: 3%;
 }
 
+/* These next few are need so that when the screen is at a certain width the nav bar will collapse */
 input#nav-check {
   position: absolute;
   opacity: 0;
@@ -96,6 +106,7 @@ input#nav-check {
   align-items: center;
   margin-right: 5%;
 }
+/* These create the three lines that appear at a certain width */
 .nav-toggler span {
   display: block;
   height: 2px;
@@ -103,7 +114,6 @@ input#nav-check {
   background-color: #feffe6;
   position: relative;
 }
-
 .nav-toggler span::before,
 .nav-toggler span::after {
   content: "";
@@ -113,7 +123,6 @@ input#nav-check {
   background-color: #feffe6;
   left: 0;
 }
-
 .nav-toggler span::before {
   top: -6px;
 }
@@ -121,11 +130,7 @@ input#nav-check {
   top: 6px;
 }
 
-.title {
-  margin: 2%;
-  margin-left: 4%;
-}
-
+/* This is for the navbar items. It's technically a drop down button so that more menu items can be accessed */
 .dropbtn {
   padding: 16px;
   font-size: 16px;
@@ -133,6 +138,7 @@ input#nav-check {
   cursor: pointer;
 }
 
+/* This changes the two navbars colors, so that they don't look the same */
 .second {
   background-color: #035e7b;
   color: #feffe6;
@@ -142,6 +148,8 @@ input#nav-check {
   color: #a9bfca;
 }
 
+/* These next few styles are for the nav bar drop downs. Setting up colors and making sure that 
+each item is in line */
 .dropdown {
   position: relative;
   display: inline-block;
@@ -176,6 +184,11 @@ input#nav-check {
   color: #002e2c;
 }
 
+
+/* this is the first part of the page, or the landing split into .words and landing-img. As the .words
+is the second header and intro to the website. And the image is just an image  */
+/* Landing creates a flexbox for the two divs, so that they can be arranged in a way that will allow for a responsive
+design. */
 #landing {
   background-color: #96acb77a;
   display: flex;
@@ -188,6 +201,10 @@ input#nav-check {
 }
 .words {
   margin-right: 4%;
+}
+
+#landing-img {
+  width: 100%;
 }
 
 #second-nav {
@@ -203,14 +220,12 @@ input#nav-check {
   justify-content: space-between;
 }
 
-#landing-img {
-  width: 100%;
-}
-
+/* Similar to #landing this is the larger div created so that it's easier to have a responsive website  */
 #mainInfo {
   display: flex;
 }
 
+/* This is a smaller subpart of mainInfo that stores all the announcements and news and formats them correctly */
 #news {
   background-color: #96acb77a;
   width: 50%;
@@ -223,6 +238,7 @@ input#nav-check {
   padding: 4%;
   padding-bottom: 3%;
 }
+/* This formats the other side of mainInfo */
 #meetings {
   background-color: #96acb77a;
   width: 50%;
@@ -235,7 +251,7 @@ input#nav-check {
   padding: 4%;
   padding-bottom: 3%;
 }
-
+/* This is the subpart of #meetings that essentially makes teh layout nice.  */
 #pages {
   display: flex;
   flex-direction: row;
@@ -243,6 +259,7 @@ input#nav-check {
   align-items: center;
 }
 
+/* Similar to #landing this is the larger div created so that it's easier to have a responsive website */
 #funthings {
   display: flex;
   flex-direction: column;
@@ -280,14 +297,19 @@ input#nav-check {
   margin-left: 5%;
 }
 
+
+/* This is for when the nav bars collapse. It happens at 1060px because after that the navBar starts wrapping which isn't the most
+responsive */
 @media only screen and (max-width: 1060px) {
+
+  /* These toggle the nav bar on and off */
   .nav-toggler {
     display: flex;
   }
   #second-nav {
     visibility: hidden;
   }
-  .navbar .first-nav {
+  .header .first-nav {
     position: absolute;
     left: 0;
     top: 100%;
@@ -298,25 +320,25 @@ input#nav-check {
     visibility: hidden;
   }
 
-  .nav-bar .first-nav .dropbtn {
+  .header .first-nav .dropbtn {
     display: block;
     margin: 0;
   }
 
-  .navbar #nav-check:checked ~ .first-nav {
+  .header #nav-check:checked ~ .first-nav {
     opacity: 1;
     visibility: visible;
     z-index: 1;
   }
 
-  .navbar #nav-check:checked ~ .nav-toggler span {
+  .header #nav-check:checked ~ .nav-toggler span {
     background-color: transparent;
   }
-  .navbar #nav-check:checked ~ .nav-toggler span::before {
+  .header #nav-check:checked ~ .nav-toggler span::before {
     top: 0;
     transform: rotate(45deg);
   }
-  .navbar #nav-check:checked ~ .nav-toggler span::after {
+  .header #nav-check:checked ~ .nav-toggler span::after {
     top: 0;
     transform: rotate(-45deg);
   }
@@ -324,23 +346,23 @@ input#nav-check {
   body {
     display: flex;
     background-color: #feffe674;
-    /* color: rgb(27, 1, 84); */
-    /* font-family: monospace; */
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
 
+  /* this changes the layout of #landing so that all components are stacked on top of each other rather than side by side */
   #landing {
     display: flex;
     flex-direction: column;
   }
-
+/* Does the same thing as #landing */
   #mainInfo {
     display: flex;
     flex-direction: column;
   }
 
+  /* These two really fix up the spacing issues that happened with changing mainInfo */
   #news {
     width: auto;
     margin-top: 2%;
@@ -380,6 +402,7 @@ input#nav-check {
   }
 }
 @media only screen and (max-width: 600px) {
+  /* Because the font size used for h1 was becoming too large at this width it was needed to make it smaller as the width got even smaller. */
   h1 {
     font-size: 26px;
   }
