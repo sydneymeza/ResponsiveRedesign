@@ -1,32 +1,230 @@
-  <!-- TO RUN IN BROWSER:
+<!-- TO RUN IN BROWSER:
     1. Install vscode extension Name: open in `browser open-in-browser` by TechER
     2. Right click html file and either run in default browser or another browser
   -->
-
 
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>HTML/CSS Studio</title>
+    <title>Responsive Redesign</title>
     <!-- import CSS styles -->
-    <link rel="stylesheet" href="styles.css" /> 
+    <link rel="stylesheet" href="styles.css" />
   </head>
 
   <!-- page content goes into <body> -->
   <body>
-    <div id="logoBar">
-      <h1>Welcome to 100 Acre Wood!</h1>
-      <img id="siteLogo" alt="Pooh-bear site logo" src="./assets/Header.png"/>
-      <h3>We're glad you're here :D</h3>
+    <div id="logoBar" class="navbar">
+      <h1 class="title">Menominee Indian Tribe</h1>
+      <!-- <img id="siteLogo" alt="Pooh-bear site logo" src="./assets/menominee_main.jpeg" /> -->
+      <input type="checkbox" id="nav-check" />
+      <label for="nav-check" class="nav-toggler">
+        <span></span>
+      </label>
+      <div class="first-nav">
+        <div class="dropdown">
+          <button class="dropbtn first">Government</button>
+          <div class="dropdown-content">
+            <a href="#">Departments</a>
+            <a href="#">Conservation Regulations</a>
+            <a href="#">General Info</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn first">Culture</button>
+          <div class="dropdown-content">
+            <a href="#">About Us</a>
+            <a href="#">Historical Documents</a>
+            <a href="#">Interactive History</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn first">Community</button>
+          <div class="dropdown-content">
+            <a href="#">Emergency Alerts</a>
+            <a href="#">Community Events</a>
+            <a href="#">Community Projects</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn first">Visitors</button>
+          <div class="dropdown-content">
+            <a href="#">Contact Us</a>
+            <a href="#">Tourism</a>
+            <a href="#">Links/Resources</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn first">Business</button>
+          <div class="dropdown-content">
+            <a href="#">Chartered Entities</a>
+            <a href="#">Permits</a>
+            <a href="#">Menominee Contractors</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn first">Member Login</button>
+        </div>
+      </div>
     </div>
-    <hr/>
-    <div id="staffGallery">
-      <img class="galleryImage" src="./assets/Eeyore-Eh.png"/>
-      <img class="galleryImage" src="./assets/Eeyore-Zz.png"/>
-      <img class="galleryImage" src="./assets/Kanga-Roo.png"/>
-      <img class="galleryImage" src="./assets/Owl-Phone.png"/>
+    <div id="landing">
+      <div class="words">
+        <h1>
+          Posoh Mawanew Weyak <br />
+          (Hello Everyone)
+        </h1>
+        <p>
+          Welcome to the Menominee Indian Tribe of Wisconsin. The Menominee
+          Tribe's history is unique because our origin or creation begins at the
+          mouth of the Menominee River, a mere 60 miles east of our present
+          Menominee Indian Reservation. This is where our five clans: ancestral
+          Bear, Eagle, Wolf, Moose, and Crane were created. Not many tribes in
+          this region can attest to the fact their origin place exists close or
+          near to their present reservation. This is where our history begins.
+          Explore and feel the history of the Menominee Indian Tribe from past
+          to present.
+        </p>
+      </div>
+      <p>
+        <img
+          id="landing-img"
+          alt="Image of the side of the Menominee River, with a tree and a fence"
+          src="./assets/menominee_main.jpeg"
+        />
+      </p>
+    </div>
+
+    <div id="second-nav">
+      <div class="dropdown">
+        <button class="dropbtn second">Back Forty Mine</button>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn second">DAIT</button>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn second">Employment</button>
+        <div class="dropdown-content">
+          <a href="#">MITW Employment</a>
+          <a href="#">Other Employment</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn second">Employees</button>
+        <div class="dropdown-content">
+          <a href="#">Employees Info</a>
+          <a href="#">MITW Wellness</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn second">Tribal Laws</button>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn second">Forms</button>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn second">Contact</button>
+      </div>
+    </div>
+
+    <div id="mainInfo">
+      <div id="news">
+        <h2>News and Announcements</h2>
+        <div id="new-section">
+          <h3>
+            ARPA Tribal Elder Heating Assistance Returned Applications Feb 15th
+          </h3>
+          <p>
+            The Menominee Tribal Legislature has authorized a Heating Assistance
+            payment for Menominee tribal elders who reside on and off
+            reservation, age 65 and older as of November 2, 2023.<br />
+            The assistance is …
+            <a href="https://menominee-nsn.gov/Default.aspx">(Read More)</a>
+          </p>
+        </div>
+        <div id="new-section">
+          <h3>Emergency Resources</h3>
+          <p>List of Emergency Resources</p>
+        </div>
+        <div id="new-section">
+          <h3>General Welfare Payment Assistance 2023 Update</h3>
+          <p>
+            General Welfare Payment Assistance 2023 Update Portal now open
+            <br />
+            The Menominee Indian Tribe has authorized a $100 General Welfare
+            Assistance payment to all enrolled Menominee Tribal members as of
+            November…
+            <a href="https://menominee-nsn.gov/Default.aspx">(Read More)</a>
+          </p>
+        </div>
+      </div>
+      <div id="meetings">
+        <h2>Upcoming Meetings</h2>
+        <div id="meeting-section">
+          <h3>Menominee Loan Fund Commitee Regular Meeting</h3>
+          <p>
+            Mar 11 2024 4:30PM <br />
+            Dept. of Lending & Tribal Taxes - Meeting Room <br />
+            <a href="https://menominee-nsn.gov/Default.aspx"> View Agenda</a>
+          </p>
+        </div>
+        <div id="meeting-section">
+          <h3>Zoar Community Meeting Quarterly Meeting</h3>
+          <p>
+            Mar 11 2024 5:00PM <br />
+            Zoar Community Center<br />
+            <a href="https://menominee-nsn.gov/Default.aspx"> View Agenda</a>
+          </p>
+        </div>
+        <div id="meeting-section">
+          <h3>MTE Personnel Committee Regular Meeting</h3>
+          <p>
+            Mar 12 2024 12:00PM <br />Menominee Tribal Enterprises Boardroom
+            <br />
+            <a href="https://menominee-nsn.gov/Default.aspx"> View Agenda</a>
+          </p>
+        </div>
+        <div id="pages">
+          <button class="back"><<-</button>
+          <button class="back"><-</button>
+          <p>Page 1 of 3</p>
+          <button class="next">-></button>
+          <button class="next">->></button>
+        </div>
+      </div>
+    </div>
+
+    <div id="fun-things">
+      <h3 class="facebook-line">Check out our facebook!</h3>
+      <a href="">
+        <img alt="Image/link to the menominee facebook page" src="/assets/IMG_1065.jpg"/>
+      </a>
+      <div class="learn-more-buttons">
+        <button class="learn-more">Tribal Members Login</button>
+        <button class="learn-more">Vision and Values</button>
+        <button class="learn-more"> Sign up for Emergency Alerts</button>
+      </div>
+    </div>
+
+    <div id="bottom-nav">
+      <h2 class="bottom-header">The Menominee Indian Tribe of Wisconsin</h2>
+      <div class="extra-info">
+        <p>
+          Contact Us!
+          <br />
+          (877)209-5866
+          <br />
+          (715)799-5100
+          <br />
+          Email us <a href="https://menominee-nsn.gov/Default.aspx">here!</a>
+        </p>
+        <p>
+          W2908 Tribal Office Loop Road
+          <br />
+          PO Box 910
+          <br />
+          Keshena, WI 54135
+        </p>
+      </div>
     </div>
   </body>
-
 </html>
