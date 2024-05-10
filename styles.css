@@ -36,18 +36,6 @@ a:hover {
   color: #035e7b;
 }
 
-/* This is the basic styling for the buttons */
-button {
-  background-color: #a2a77f;
-  color: #eff1c5;
-  border-radius: 7px;
-}
-button:hover {
-  background-color: #cacfa8;
-}
-button:active {
-  background-color: #80874f;
-}
 
 /* Setting the image width to keep it from */
 img {
@@ -59,11 +47,26 @@ in the Upcoming meetings section -> just giving them better spacingg */
 .back {
   height: 5vh;
   margin: 2%;
+  color:#002e2c;
+  background-color: #cacfa8;
+  border-radius: 7px;
 }
+.back:hover{
+  background-color: #eff1c5;
+}
+
 .next {
   height: 5vh;
   margin: 2%;
+  color:#002e2c;
+  background-color: #cacfa8;
+  border-radius: 7px;
 }
+
+.next:hover{
+  background-color: #eff1c5;
+}
+
 
 
 /* This is for the top of the page the navbar/header */
@@ -274,9 +277,16 @@ design. */
 }
 
 .learn-more {
+  background-color: #cacfa8;
   width: 20%;
   height: 5vh;
   font-size: medium;
+  color:#002e2c;
+  border-radius: 7px;
+}
+
+.learn-more:hover{
+  background-color: #feffe6;
 }
 
 #bottom-nav {
@@ -285,6 +295,7 @@ design. */
   display: flex;
   flex-direction: column;
   background-color: #a9bfca;
+  padding: 1.5%;
 }
 
 .extra-info {
@@ -396,6 +407,8 @@ responsive */
     display: flex;
     flex-direction: column;
     background-color: #a9bfca;
+
+  
   }
   .learn-more {
     font-size: x-small;
